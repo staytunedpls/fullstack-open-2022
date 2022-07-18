@@ -1,0 +1,23 @@
+note over browser:
+on submit JS code is run
+(default submit action is prevented)
+end note
+note over browser
+note is packaged into JSON
+(date is added as well)
+end note
+note over browser
+add note to the list of notes
+redraw all notes with added note
+end note
+note over browser
+before sending content-type
+application/json is specified
+end note
+browser->server: HTTP POST JSON string  https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server
+server saves the note
+(note is available after refresh)
+end note
+
+title Single-page app (SPA): new note

@@ -1,0 +1,28 @@
+browser->server: HTTP POST new note to https://studies.cs.helsinki.fi/exampleapp/new_note
+note over server:
+server accesses sent data
+server creates a new note object
+2 fields: date and sent content
+and adds it to the "notes" array
+end note
+server-->browser: URL redirect to https://studies.cs.helsinki.fi/exampleapp/notes
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML page code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing JS
+that requests JSON from the server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: list of notes with the new note present
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+title Creating a new note (AJAX style)
