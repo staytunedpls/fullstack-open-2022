@@ -33,6 +33,7 @@ const App = () => {
     console.log(person);
     setPersons(persons.concat(person));
     setNewName("");
+    setNewNumber("");
   };
 
   const filterByName = (person) => {
@@ -58,7 +59,8 @@ const App = () => {
     <div>
       <h2>Phonebook</h2>
       <div>
-        filter shown with <input type="text" value={searchName} onChange={handleSearchChange} />
+        filter shown with{" "}
+        <input type="text" value={searchName} onChange={handleSearchChange} />
       </div>
       <h2>Add a new</h2>
       <form onSubmit={addPerson}>
